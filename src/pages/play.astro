@@ -1,0 +1,68 @@
+---
+import RootLayout from "../layouts/RootLayout.astro";
+import MushroomRunner from "../components/MushroomRunner.astro";
+
+const pageTitle = "Play Mushroom Runner | GardenGate Games";
+const description =
+  "Play our fun Mushroom Runner side-scrolling game and help the little mushroom jump over obstacles!";
+---
+
+<RootLayout pageTitle={pageTitle} description={description}>
+  <main>
+    <section class="game-section">
+      <MushroomRunner client:load />
+    </section>
+
+    <section class="about-game">
+      <h2>About Mushroom Runner</h2>
+      <p>
+        Mushroom Runner is a fun side-scrolling game where you help a cute
+        little mushroom jump over various forest obstacles. How far can you make
+        it?
+      </p>
+
+      <h3>How to Play</h3>
+      <ul>
+        <li>Press SPACE or tap/click to jump</li>
+        <li>Hold longer for higher jumps</li>
+        <li>Avoid hitting logs, rocks, and enemy mushrooms</li>
+        <li>Your score increases the longer you survive</li>
+      </ul>
+    </section>
+  </main>
+</RootLayout>
+
+<style>
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .game-section {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-game {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    color: #2e4033;
+    margin-top: 0;
+  }
+
+  h3 {
+    color: #5a7d60;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+</style>
