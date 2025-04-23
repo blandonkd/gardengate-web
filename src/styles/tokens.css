@@ -1,0 +1,76 @@
+/* src/styles/tokens.css */
+:root {
+  /* Base colors from your palette */
+  --color-deep-blue: #100b2a;
+  --color-navy: #2a213a;
+  --color-teal: #314743;
+  --color-sage: #65856d;
+  --color-mint: #adca9a;
+  --color-pale-green: #ecfeca;
+
+  --color-burgundy: #582d27;
+  --color-rust: #974133;
+  --color-terra-cotta: #d67654;
+  --color-plum: #5d3441;
+  --color-mauve: #a3685b;
+  --color-peach: #ffb379;
+
+  --color-cream: #ffe6a9;
+  --color-white: #ffffff;
+
+  /* Semantic color tokens */
+
+  /* Background colors */
+  --color-background-primary: var(--color-pale-green);
+  --color-background-secondary: var(--color-navy);
+  --color-background-tertiary: var(--color-teal);
+  --color-background-light: var(--color-pale-green);
+  --color-background-accent: var(--color-pale-green);
+
+  /* Text colors */
+  --color-text-dark: var(--color-deep-blue);
+  --color-text-light: var(--color-white);
+  --color-text-muted: var(--color-mauve);
+  --color-text-accent: var(--color-rust);
+
+  /* UI element colors */
+  --color-button-primary: var(--color-terra-cotta);
+  --color-button-secondary: var(--color-sage);
+  --color-button-hover: var(--color-peach);
+  --color-button-disabled: var(--color-navy);
+
+  /* Border colors */
+  --color-border-light: var(--color-cream);
+  --color-border-dark: var(--color-plum);
+
+  /* Game theme specific colors */
+  --color-foliage: var(--color-sage);
+  --color-foliage-light: var(--color-mint);
+  --color-earth: var(--color-burgundy);
+  --color-wood: var(--color-rust);
+  --color-mushroom: var(--color-peach);
+  --color-sky: var(--color-pale-green);
+
+  /* Status colors */
+  --color-success: var(--color-mint);
+  --color-warning: var(--color-peach);
+  --color-error: var(--color-rust);
+  --color-info: var(--color-teal);
+
+  /* Gradient combinations */
+  --gradient-evening: linear-gradient(
+    to bottom,
+    var(--color-deep-blue),
+    var(--color-plum)
+  );
+  --gradient-forest: linear-gradient(
+    to right,
+    var(--color-teal),
+    var(--color-sage)
+  );
+  --gradient-sunset: linear-gradient(
+    to right,
+    var(--color-terra-cotta),
+    var(--color-peach)
+  );
+}
