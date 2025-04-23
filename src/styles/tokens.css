@@ -1,13 +1,11 @@
-/* src/styles/tokens.css */
 :root {
-  /* Base colors from your palette */
+  /* Base colors */
   --color-deep-blue: #100b2a;
   --color-navy: #2a213a;
   --color-teal: #314743;
   --color-sage: #65856d;
   --color-mint: #adca9a;
   --color-pale-green: #ecfeca;
-
   --color-burgundy: #582d27;
   --color-rust: #974133;
   --color-terra-cotta: #d67654;
@@ -17,8 +15,6 @@
 
   --color-cream: #ffe6a9;
   --color-white: #ffffff;
-
-  /* Semantic color tokens */
 
   /* Background colors */
   --color-background-primary: var(--color-pale-green);
