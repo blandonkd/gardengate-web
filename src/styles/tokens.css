@@ -69,4 +69,8 @@
     var(--color-terra-cotta),
     var(--color-peach)
   );
+
+  /* Typography */
+  --font-headers: "Cabin Sketch", sans-serif;
+  --font-body: "Comic Relief", sans-serif;
 }
