@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import bannerImage from "../assets/banner.png";
+import "../styles/tokens.css";
+
+const {
+  title = "Garden Gate Game",
+  tagline = "Cultivating cozy gaming experiences",
+} = Astro.props;
+---
+
+<div class="banner-container">
+  <div class="image-container">
+    <Image
+      src={bannerImage}
+      alt="Garden Gate Games studio banner"
+      width={1920}
+      height={500}
+      format="webp"
+      loading="eager"
+      class="banner-image"
+    />
+  </div>
+  <div class="text-overlay">
+    <h1>{title}</h1>
+    <p>{tagline}</p>
+  </div>
+</div>
+
+<style>
+  /* Override global body padding for the banner */
+  :global(body) {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .banner-container {
+    position: relative;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    margin: 0;
+    max-height: 500px;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 50px 10px rgba(16, 11, 42, 0.6);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px var(--color-dark-purple);
+    z-index: 2;
+  }
+
+  .text-overlay h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+  }
+
+  .text-overlay p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: var(--font-body);
+  }
+
+  @media (max-width: 768px) {
+    .banner-container {
+      height: 300px;
+    }
+  }
+</style>
