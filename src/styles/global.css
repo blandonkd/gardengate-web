@@ -24,6 +24,13 @@ main {
   box-sizing: border-box;
 }
 
+.content-container {
+  margin: 0 auto;
+  max-width: 80ch;
+  padding: 0 1rem;
+  width: 100%;
+}
+
 h1,
 h2 {
   margin: 1rem 0;
