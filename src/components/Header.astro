@@ -1,11 +1,28 @@
 ---
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
+import Banner from "./Banner.astro";
 ---
 
-<header>
-  <nav>
+<header class="site-header">
+  <Banner />
+  <nav class="navigation-container">
     <Hamburger />
     <Navigation />
   </nav>
 </header>
+
+<style>
+  .site-header {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+  }
+
+  .navigation-container {
+    margin: 0 auto;
+    max-width: 80ch;
+    padding: 1rem;
+  }
+</style>
